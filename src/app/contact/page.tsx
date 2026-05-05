@@ -59,7 +59,7 @@ export default function ContactPage() {
             <iframe
               title="Book a discovery call with Oweba"
               src={`${calendlyUrl}?hide_event_type_details=1&hide_gdpr_banner=1`}
-              className="h-[760px] w-full rounded-[24px] border-0"
+              className="h-125 w-full rounded-[24px] border-0 md:h-190"
             />
           </div>
         </Container>

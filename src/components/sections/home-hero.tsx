@@ -28,7 +28,7 @@ export function HomeHero() {
   const glare = useMotionTemplate`radial-gradient(circle at ${glowX}% ${glowY}%, rgba(248, 244, 236, 0.24), transparent 24%)`;
 
   const heroHeadlineStyle = {
-    fontSize: "clamp(1.35rem, 2.75vw, 2.45rem)",
+    fontSize: "clamp(1.75rem, 2.75vw, 2.45rem)",
     lineHeight: 1.14
   } as const;
 

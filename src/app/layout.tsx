@@ -39,7 +39,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
       <body className={`${sora.variable} ${inter.variable} ${jetBrainsMono.variable} antialiased`} suppressHydrationWarning>
-        <div className="shell min-h-screen">
+        <div className="shell min-h-screen pb-28 lg:pb-0">
           <SiteHeader />
           <main>{children}</main>
           <SiteFooter />
