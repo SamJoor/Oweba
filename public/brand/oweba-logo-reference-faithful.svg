@@ -1,0 +1,46 @@
+<svg width="710" height="160" viewBox="0 0 710 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Oweba Logo</title>
+  <g stroke="#9AA0A8" stroke-width="1.4" stroke-linecap="round" opacity="0.78">
+    <path d="M34 82H686" />
+    <path d="M34 113H686" />
+    <path d="M112 34V144" />
+    <path d="M42 113H26" />
+    <path d="M161 18L182 144" />
+    <path d="M189 18L210 144" />
+    <path d="M243 18L264 144" />
+    <path d="M271 18L292 144" />
+    <path d="M351 18V144" />
+    <path d="M385 18V144" />
+    <path d="M434 18V144" />
+    <path d="M456 18V144" />
+    <path d="M540 18L520 144" />
+    <path d="M644 18L624 144" />
+  </g>
+
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="112" cy="82" r="42" stroke="#163A70" stroke-width="14" />
+    <circle cx="112" cy="82" r="27" stroke="#2F6BFF" stroke-width="6" />
+    <path d="M112 55V109" stroke="#163A70" stroke-width="4.5" />
+    <path d="M85 82H139" stroke="#163A70" stroke-width="4.5" />
+
+    <path d="M162 20L182 144L212 20L242 144L272 20" stroke="#163A70" stroke-width="14" />
+    <path d="M212 20L182 144" stroke="#2F6BFF" stroke-width="4" opacity="0.92" />
+    <path d="M212 20L242 144" stroke="#2F6BFF" stroke-width="4" opacity="0.92" />
+
+    <path d="M303 20V144" stroke="#163A70" stroke-width="14" />
+    <path d="M303 20H384" stroke="#163A70" stroke-width="14" />
+    <path d="M303 82H372" stroke="#163A70" stroke-width="14" />
+    <path d="M303 144H384" stroke="#163A70" stroke-width="14" />
+    <path d="M384 20V144" stroke="#2F6BFF" stroke-width="4" opacity="0.86" />
+
+    <path d="M426 20V144" stroke="#163A70" stroke-width="14" />
+    <path d="M426 20H480C505 20 521 36 521 55C521 69 513 80 497 86C516 91 529 106 529 126" stroke="#163A70" stroke-width="14" />
+    <path d="M426 82H482" stroke="#163A70" stroke-width="14" />
+    <path d="M426 144H486C512 144 529 126 529 105" stroke="#163A70" stroke-width="14" />
+    <path d="M454 20V144" stroke="#2F6BFF" stroke-width="4" opacity="0.86" />
+
+    <path d="M565 144L613 20L661 144" stroke="#163A70" stroke-width="14" />
+    <path d="M586 99H640" stroke="#163A70" stroke-width="14" />
+    <path d="M613 20V144" stroke="#2F6BFF" stroke-width="4" opacity="0.9" />
+  </g>
+</svg>

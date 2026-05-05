@@ -1,0 +1,24 @@
+<svg width="620" height="120" viewBox="0 0 620 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Oweba Signal Wordmark</title>
+  <rect width="620" height="120" rx="28" fill="#F5F7FB"/>
+  <g opacity="0.16" stroke="#AFC0E3">
+    <path d="M14 24H606M14 60H606M14 96H606"/>
+    <path d="M38 12V108M74 12V108M110 12V108M180 12V108M252 12V108M324 12V108M414 12V108M510 12V108"/>
+  </g>
+  <rect x="18" y="18" width="84" height="84" rx="24" fill="#0B1020"/>
+  <circle cx="60" cy="60" r="20" stroke="#F5F7FB" stroke-width="5"/>
+  <path d="M60 24V30" stroke="#6EE7FF" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M60 90V96" stroke="#6EE7FF" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M24 60H30" stroke="#6EE7FF" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M90 60H96" stroke="#6EE7FF" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M34 34L38 38" stroke="#2F6BFF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M82 82L86 86" stroke="#2F6BFF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M82 38L86 34" stroke="#2F6BFF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M34 86L38 82" stroke="#2F6BFF" stroke-width="3" stroke-linecap="round"/>
+  <g fill="#0B1020">
+    <path d="M146 82L158 34H172L188 73L204 34H218L230 82H218L210 48L195 82H181L166 48L158 82H146Z" />
+    <path d="M250 34H310V46H264V54H303V66H264V70H311V82H250V34Z" />
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M330 34H370C391 34 404 43 404 59C404 67 400 74 392 77C385 80 377 82 366 82H330V34ZM344 46V56H368C378 56 390 56 390 46H344ZM344 68V70H368C381 70 390 69 390 62C390 55 381 54 368 54H344V68Z" />
+    <path d="M421 82L449 34H463L491 82H477L471 70H442L436 82H421ZM447 59H466L456 41L447 59Z" />
+  </g>
+</svg>

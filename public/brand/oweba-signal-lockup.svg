@@ -1,0 +1,25 @@
+<svg width="760" height="180" viewBox="0 0 760 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Oweba Signal Lockup</title>
+  <rect width="760" height="180" rx="32" fill="#F5F7FB"/>
+  <g opacity="0.12" stroke="#AFC0E3">
+    <path d="M24 36H736M24 72H736M24 108H736M24 144H736"/>
+    <path d="M48 18V162M84 18V162M120 18V162M156 18V162M228 18V162M300 18V162M372 18V162M468 18V162M564 18V162"/>
+  </g>
+  <rect x="34" y="34" width="112" height="112" rx="30" fill="#0B1020"/>
+  <circle cx="90" cy="90" r="28" stroke="#F5F7FB" stroke-width="6"/>
+  <path d="M90 40V48" stroke="#6EE7FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M90 132V140" stroke="#6EE7FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M40 90H48" stroke="#6EE7FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M132 90H140" stroke="#6EE7FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M54 54L60 60" stroke="#2F6BFF" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M120 120L126 126" stroke="#2F6BFF" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M120 60L126 54" stroke="#2F6BFF" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M54 126L60 120" stroke="#2F6BFF" stroke-width="3.5" stroke-linecap="round"/>
+  <g fill="#0B1020">
+    <path d="M186 110L200 52H216L235 98L254 52H270L284 110H270L261 69L243 110H227L209 69L200 110H186Z" />
+    <path d="M308 52H378V66H324V74H370V88H324V96H379V110H308V52Z" />
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M398 52H444C469 52 484 62 484 80C484 90 479 98 470 102C462 107 452 110 439 110H398V52ZM414 66V78H441C453 78 468 78 468 66H414ZM414 92V96H441C457 96 468 95 468 86C468 77 457 76 441 76H414V92Z" />
+    <path d="M503 110L535 52H551L583 110H567L560 96H526L519 110H503ZM533 83H554L543 61L533 83Z" />
+  </g>
+  <text x="188" y="136" fill="#556483" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" letter-spacing="5">DESIGNED TO HELP SMALL BUSINESSES SHOW UP WITH CONFIDENCE</text>
+</svg>

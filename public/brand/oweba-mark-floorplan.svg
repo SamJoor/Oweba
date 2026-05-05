@@ -1,0 +1,17 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Oweba Mark</title>
+  <rect x="10" y="10" width="108" height="108" rx="28" fill="#163A70"/>
+  <rect x="10" y="10" width="108" height="108" rx="28" stroke="#2F6BFF" stroke-opacity="0.16"/>
+  <circle cx="64" cy="64" r="31" stroke="#F8F4EC" stroke-width="6"/>
+  <path d="M40 52H88" stroke="#2F6BFF" stroke-width="2.5"/>
+  <path d="M40 76H88" stroke="#2F6BFF" stroke-width="2.5"/>
+  <path d="M52 40V88" stroke="#2F6BFF" stroke-width="2.5"/>
+  <path d="M76 40V88" stroke="#2F6BFF" stroke-width="2.5"/>
+  <path d="M52 52H76" stroke="#F8F4EC" stroke-width="4"/>
+  <path d="M52 76H76" stroke="#F8F4EC" stroke-width="4"/>
+  <path d="M52 52V76" stroke="#F8F4EC" stroke-width="4"/>
+  <path d="M76 52V64" stroke="#F8F4EC" stroke-width="4"/>
+  <path d="M76 76V88" stroke="#F8F4EC" stroke-width="4"/>
+  <path d="M64 64H76" stroke="#F8F4EC" stroke-width="4"/>
+  <path d="M64 64C70.6274 64 76 69.3726 76 76" stroke="#F8F4EC" stroke-width="3"/>
+</svg>

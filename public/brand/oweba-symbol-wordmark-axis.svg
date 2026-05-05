@@ -1,0 +1,36 @@
+<svg width="900" height="220" viewBox="0 0 900 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Oweba Axis</title>
+  <rect width="900" height="220" rx="28" fill="#F8F4EC"/>
+  <g opacity="0.55" stroke="#D6D0C6">
+    <path d="M0 36H900M0 72H900M0 108H900M0 144H900M0 180H900" />
+    <path d="M36 0V220M72 0V220M108 0V220M144 0V220M180 0V220M216 0V220" />
+  </g>
+  <rect x="30" y="30" width="160" height="160" rx="32" fill="#FFFDF8" stroke="#163A70" stroke-width="4"/>
+  <circle cx="110" cy="110" r="42" stroke="#163A70" stroke-width="10"/>
+  <circle cx="110" cy="110" r="26" stroke="#2F6BFF" stroke-width="6"/>
+  <path d="M110 48V24" stroke="#8E96A4" stroke-width="3" stroke-linecap="round"/>
+  <path d="M110 196V172" stroke="#8E96A4" stroke-width="3" stroke-linecap="round"/>
+  <path d="M48 110H24" stroke="#8E96A4" stroke-width="3" stroke-linecap="round"/>
+  <path d="M196 110H172" stroke="#8E96A4" stroke-width="3" stroke-linecap="round"/>
+  <path d="M68 68L50 50" stroke="#8E96A4" stroke-width="3" stroke-linecap="round"/>
+  <path d="M152 152L170 170" stroke="#8E96A4" stroke-width="3" stroke-linecap="round"/>
+  <path d="M152 68L170 50" stroke="#8E96A4" stroke-width="3" stroke-linecap="round"/>
+  <path d="M68 152L50 170" stroke="#8E96A4" stroke-width="3" stroke-linecap="round"/>
+  <text x="236" y="137" fill="#163A70" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="700" letter-spacing="10">OWEBA</text>
+  <g opacity="0.45" stroke="#8E96A4" stroke-width="2">
+    <path d="M242 62H804" />
+    <path d="M242 108H804" />
+    <path d="M242 154H804" />
+    <path d="M266 54V164" />
+    <path d="M360 54L378 164" />
+    <path d="M395 54L413 164" />
+    <path d="M482 54V164" />
+    <path d="M570 54V164" />
+    <path d="M604 54V164" />
+    <path d="M676 54V164" />
+    <path d="M748 54L728 164" />
+    <path d="M792 54L812 164" />
+  </g>
+  <path d="M220 163H809" stroke="#8E96A4" stroke-width="2"/>
+  <path d="M220 58H809" stroke="#8E96A4" stroke-width="2"/>
+</svg>

@@ -1,0 +1,38 @@
+<svg width="900" height="220" viewBox="0 0 900 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Oweba Pencil Brain Clean</title>
+  <rect width="900" height="220" rx="28" fill="#F8F4EC"/>
+  <g opacity="0.32" stroke="#D6D0C6">
+    <path d="M18 42H882M18 86H882M18 130H882M18 174H882" />
+    <path d="M42 18V202M86 18V202M130 18V202M174 18V202" />
+  </g>
+  <rect x="28" y="28" width="168" height="168" rx="34" fill="#FFFDF8" stroke="#163A70" stroke-width="4"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M74 136C74 112 92 94 116 94C127 94 137 98 144 105C150 98 160 94 171 94" stroke="#163A70" stroke-width="8"/>
+    <path d="M74 136C74 153 88 166 106 166H141C159 166 173 152 173 134" stroke="#163A70" stroke-width="8"/>
+    <path d="M102 108C105 102 111 98 119 98" stroke="#2F6BFF" stroke-width="4"/>
+    <path d="M124 94C126 85 133 79 143 79C153 79 161 84 165 92" stroke="#163A70" stroke-width="8"/>
+    <path d="M113 146H145" stroke="#163A70" stroke-width="6"/>
+    <path d="M126 70L162 106" stroke="#163A70" stroke-width="10"/>
+    <path d="M135 61L171 97" stroke="#F2C38A" stroke-width="10"/>
+    <path d="M122 57L132 67" stroke="#E6847A" stroke-width="10"/>
+    <path d="M167 102L176 111" stroke="#B88A58" stroke-width="10"/>
+    <path d="M176 111L165 122" stroke="#2F6BFF" stroke-width="8"/>
+    <path d="M112 48V28" stroke="#8E96A4" stroke-width="3"/>
+    <path d="M48 112H28" stroke="#8E96A4" stroke-width="3"/>
+  </g>
+  <g opacity="0.3" stroke="#8E96A4" stroke-width="2">
+    <path d="M236 62H820" />
+    <path d="M236 108H820" />
+    <path d="M236 154H820" />
+    <path d="M266 54V164" />
+    <path d="M360 54L376 164" />
+    <path d="M400 54L416 164" />
+    <path d="M490 54V164" />
+    <path d="M584 54V164" />
+    <path d="M618 54V164" />
+    <path d="M704 54V164" />
+    <path d="M790 54L772 164" />
+    <path d="M826 54L844 164" />
+  </g>
+  <text x="236" y="136" fill="#163A70" font-family="Arial, Helvetica, sans-serif" font-size="90" font-weight="700" letter-spacing="10">OWEBA</text>
+</svg>

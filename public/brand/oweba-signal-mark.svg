@@ -1,0 +1,13 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Oweba Signal Mark</title>
+  <rect width="128" height="128" rx="36" fill="#0B1020"/>
+  <circle cx="64" cy="64" r="24" stroke="#F5F7FB" stroke-width="6"/>
+  <path d="M64 12V22" stroke="#6EE7FF" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M64 106V116" stroke="#6EE7FF" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M12 64H22" stroke="#6EE7FF" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M106 64H116" stroke="#6EE7FF" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M26 26L33 33" stroke="#2F6BFF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M95 95L102 102" stroke="#2F6BFF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M95 33L102 26" stroke="#2F6BFF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M26 102L33 95" stroke="#2F6BFF" stroke-width="4" stroke-linecap="round"/>
+</svg>

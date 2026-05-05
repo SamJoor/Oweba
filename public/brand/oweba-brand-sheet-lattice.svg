@@ -1,0 +1,31 @@
+<svg width="1200" height="920" viewBox="0 0 1200 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Oweba Concept 3 - Lattice</title>
+  <rect width="1200" height="920" rx="36" fill="#F5F7FB"/>
+  <text x="64" y="86" fill="#0B1020" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="3">OWEBA / CONCEPT 03 / LATTICE</text>
+  <text x="64" y="118" fill="#4B587C" font-family="Arial, Helvetica, sans-serif" font-size="16">Creative and intelligent. More abstract, still clean and scalable.</text>
+  <rect x="72" y="164" width="1056" height="684" rx="32" fill="white" stroke="#D8E0EE"/>
+  <g opacity="0.24" stroke="#D6DEEE">
+    <path d="M120 236H1080M120 316H1080M120 396H1080M120 476H1080M120 556H1080M120 636H1080M120 716H1080"/>
+    <path d="M160 196V808M240 196V808M320 196V808M400 196V808M480 196V808M560 196V808M640 196V808M720 196V808M800 196V808M880 196V808M960 196V808M1040 196V808"/>
+  </g>
+  <g transform="translate(130 236)">
+    <rect width="180" height="180" rx="32" fill="#0B1020"/>
+    <circle cx="90" cy="90" r="42" stroke="#F5F7FB" stroke-width="8"/>
+    <path d="M54 90L90 54L126 90L90 126L54 90Z" stroke="#6EE7FF" stroke-width="6"/>
+    <path d="M90 48V132" stroke="#2F6BFF" stroke-width="4"/>
+    <path d="M48 90H132" stroke="#2F6BFF" stroke-width="4"/>
+    <text x="228" y="112" fill="#0B1020" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="700" letter-spacing="10">OWEBA</text>
+    <text x="232" y="146" fill="#4B587C" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" letter-spacing="4">DIGITAL PRESENCE, DESIGNED WITH PRECISION</text>
+  </g>
+  <g transform="translate(130 516)">
+    <text x="0" y="0" fill="#0B1020" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="2">APPLICATION</text>
+    <rect x="0" y="28" width="280" height="180" rx="24" fill="#0B1020"/>
+    <rect x="320" y="28" width="280" height="180" rx="24" fill="#F5F7FB" stroke="#D8E0EE"/>
+    <rect x="640" y="28" width="280" height="180" rx="24" fill="#FFFFFF" stroke="#D8E0EE"/>
+    <text x="44" y="122" fill="#F5F7FB" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" letter-spacing="7">OWEBA</text>
+    <text x="364" y="122" fill="#0B1020" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" letter-spacing="7">OWEBA</text>
+    <rect x="742" y="78" width="76" height="76" rx="20" fill="#0B1020"/>
+    <circle cx="780" cy="116" r="18" stroke="#F5F7FB" stroke-width="4"/>
+    <path d="M764 116L780 100L796 116L780 132L764 116Z" stroke="#6EE7FF" stroke-width="3"/>
+  </g>
+</svg>

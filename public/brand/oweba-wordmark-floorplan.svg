@@ -1,0 +1,22 @@
+<svg width="560" height="120" viewBox="0 0 560 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Oweba Wordmark</title>
+  <rect width="560" height="120" rx="24" fill="#F8F4EC"/>
+  <g opacity="0.3" stroke="#C9C2B4">
+    <path d="M22 28H538M22 60H538M22 92H538"/>
+    <path d="M42 14V106M74 14V106M106 14V106M138 14V106M170 14V106"/>
+  </g>
+  <rect x="26" y="18" width="84" height="84" rx="20" fill="#163A70"/>
+  <circle cx="68" cy="60" r="24" stroke="#F8F4EC" stroke-width="5"/>
+  <path d="M50 51H86" stroke="#2F6BFF" stroke-width="2"/>
+  <path d="M50 69H86" stroke="#2F6BFF" stroke-width="2"/>
+  <path d="M59 42V78" stroke="#2F6BFF" stroke-width="2"/>
+  <path d="M77 42V78" stroke="#2F6BFF" stroke-width="2"/>
+  <path d="M59 51H77" stroke="#F8F4EC" stroke-width="3"/>
+  <path d="M59 69H77" stroke="#F8F4EC" stroke-width="3"/>
+  <path d="M59 51V69" stroke="#F8F4EC" stroke-width="3"/>
+  <path d="M77 51V60" stroke="#F8F4EC" stroke-width="3"/>
+  <path d="M77 69V78" stroke="#F8F4EC" stroke-width="3"/>
+  <path d="M68 60H77" stroke="#F8F4EC" stroke-width="3"/>
+  <path d="M68 60C72.9706 60 77 64.0294 77 69" stroke="#F8F4EC" stroke-width="2.5"/>
+  <text x="136" y="76" fill="#163A70" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700" letter-spacing="8">OWEBA</text>
+</svg>

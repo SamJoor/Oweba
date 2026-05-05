@@ -1,0 +1,36 @@
+<svg width="900" height="220" viewBox="0 0 900 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Oweba Caliper</title>
+  <rect width="900" height="220" rx="28" fill="#F8F4EC"/>
+  <g opacity="0.42" stroke="#D6D0C6">
+    <path d="M18 42H882M18 86H882M18 130H882M18 174H882" />
+    <path d="M42 18V202M86 18V202M130 18V202M174 18V202" />
+  </g>
+  <rect x="28" y="28" width="168" height="168" rx="34" fill="#FFFDF8" stroke="#163A70" stroke-width="4"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M86 60L112 110L82 160" stroke="#163A70" stroke-width="10"/>
+    <path d="M138 60L112 110L142 160" stroke="#163A70" stroke-width="10"/>
+    <circle cx="112" cy="110" r="11" fill="#2F6BFF"/>
+    <circle cx="112" cy="110" r="18" stroke="#163A70" stroke-width="4"/>
+    <path d="M95 78L129 78" stroke="#2F6BFF" stroke-width="5"/>
+    <path d="M82 160L72 176" stroke="#163A70" stroke-width="8"/>
+    <path d="M142 160L152 176" stroke="#163A70" stroke-width="8"/>
+    <path d="M112 36V22" stroke="#8E96A4" stroke-width="3"/>
+    <path d="M48 112H22" stroke="#8E96A4" stroke-width="3"/>
+    <path d="M176 112H202" stroke="#8E96A4" stroke-width="3"/>
+  </g>
+  <text x="236" y="136" fill="#163A70" font-family="Arial, Helvetica, sans-serif" font-size="90" font-weight="700" letter-spacing="10">OWEBA</text>
+  <g opacity="0.35" stroke="#8E96A4" stroke-width="2">
+    <path d="M242 64H816" />
+    <path d="M242 108H816" />
+    <path d="M242 152H816" />
+    <path d="M268 56V164" />
+    <path d="M362 56L378 164" />
+    <path d="M402 56L418 164" />
+    <path d="M490 56V164" />
+    <path d="M584 56V164" />
+    <path d="M618 56V164" />
+    <path d="M700 56V164" />
+    <path d="M784 56L766 164" />
+    <path d="M820 56L838 164" />
+  </g>
+</svg>

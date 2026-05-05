@@ -1,0 +1,24 @@
+<svg width="900" height="220" viewBox="0 0 900 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Oweba Compass</title>
+  <rect width="900" height="220" rx="28" fill="#F8F4EC"/>
+  <rect x="28" y="28" width="168" height="168" rx="34" fill="#163A70"/>
+  <circle cx="112" cy="112" r="42" stroke="#F8F4EC" stroke-width="8"/>
+  <circle cx="112" cy="112" r="23" stroke="#2F6BFF" stroke-width="5"/>
+  <path d="M112 54L126 98L170 112L126 126L112 170L98 126L54 112L98 98L112 54Z" stroke="#F8F4EC" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M112 76L121 103L148 112L121 121L112 148L103 121L76 112L103 103L112 76Z" fill="#2F6BFF"/>
+  <text x="236" y="136" fill="#163A70" font-family="'Arial Black', Arial, Helvetica, sans-serif" font-size="86" font-weight="900" letter-spacing="6">OWEBA</text>
+  <g opacity="0.5" stroke="#A2A8B3" stroke-width="2">
+    <path d="M236 62H820" />
+    <path d="M236 156H820" />
+    <path d="M236 110H820" />
+    <path d="M266 54V166" />
+    <path d="M362 54L378 166" />
+    <path d="M402 54L418 166" />
+    <path d="M492 54V166" />
+    <path d="M586 54V166" />
+    <path d="M620 54V166" />
+    <path d="M706 54V166" />
+    <path d="M790 54L770 166" />
+    <path d="M828 54L848 166" />
+  </g>
+</svg>

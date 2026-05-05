@@ -1,0 +1,36 @@
+<svg width="1200" height="920" viewBox="0 0 1200 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Oweba Concept 1 - Monolith</title>
+  <rect width="1200" height="920" rx="36" fill="#0B1020"/>
+  <g opacity="0.14" stroke="#2D3858">
+    <path d="M40 96H1160M40 176H1160M40 256H1160M40 336H1160M40 416H1160M40 496H1160M40 576H1160M40 656H1160M40 736H1160M40 816H1160"/>
+    <path d="M80 40V880M160 40V880M240 40V880M320 40V880M400 40V880M480 40V880M560 40V880M640 40V880M720 40V880M800 40V880M880 40V880M960 40V880M1040 40V880M1120 40V880"/>
+  </g>
+  <text x="64" y="86" fill="#F5F7FB" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="3">OWEBA / CONCEPT 01 / MONOLITH</text>
+  <text x="64" y="118" fill="#A7B8FF" font-family="Arial, Helvetica, sans-serif" font-size="16">Bold, premium, architectural. Less friendly, more iconic.</text>
+  <rect x="72" y="156" width="1056" height="692" rx="32" fill="#11172B" stroke="#202842"/>
+  <g transform="translate(118 214)">
+    <rect width="188" height="188" rx="38" fill="#F5F7FB"/>
+    <path d="M42 94C42 64.1766 66.1766 40 96 40C125.823 40 150 64.1766 150 94C150 123.823 125.823 148 96 148C66.1766 148 42 123.823 42 94Z" fill="#0B1020"/>
+    <path d="M64 94L96 62L128 94L96 126L64 94Z" stroke="#A7B8FF" stroke-width="8"/>
+    <path d="M96 52V136" stroke="#2F6BFF" stroke-width="5"/>
+    <path d="M54 94H138" stroke="#2F6BFF" stroke-width="5"/>
+    <text x="238" y="116" fill="#F5F7FB" font-family="Arial, Helvetica, sans-serif" font-size="96" font-weight="700" letter-spacing="12">OWEBA</text>
+    <text x="240" y="150" fill="#A7B8FF" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="5">DESIGNED PRESENCE FOR GROWING BUSINESSES</text>
+  </g>
+  <g transform="translate(118 486)">
+    <text x="0" y="0" fill="#F5F7FB" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="2">SYSTEM</text>
+    <rect x="0" y="28" width="220" height="168" rx="28" fill="#F5F7FB"/>
+    <text x="34" y="132" fill="#0B1020" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700" letter-spacing="9">OWEBA</text>
+    <rect x="252" y="28" width="168" height="168" rx="28" fill="#F5F7FB"/>
+    <path d="M294 112C294 88.804 312.804 70 336 70C359.196 70 378 88.804 378 112C378 135.196 359.196 154 336 154C312.804 154 294 135.196 294 112Z" fill="#0B1020"/>
+    <path d="M308 112L336 84L364 112L336 140L308 112Z" stroke="#A7B8FF" stroke-width="6"/>
+    <rect x="454" y="28" width="88" height="88" rx="22" fill="#F5F7FB"/>
+    <path d="M476 72C476 59.8497 485.85 50 498 50C510.15 50 520 59.8497 520 72C520 84.1503 510.15 94 498 94C485.85 94 476 84.1503 476 72Z" fill="#0B1020"/>
+    <path d="M486 72L498 60L510 72L498 84L486 72Z" stroke="#A7B8FF" stroke-width="3"/>
+    <text x="580" y="58" fill="#F5F7FB" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" letter-spacing="2">COLOR</text>
+    <rect x="580" y="74" width="42" height="42" rx="12" fill="#0B1020"/>
+    <rect x="632" y="74" width="42" height="42" rx="12" fill="#2F6BFF"/>
+    <rect x="684" y="74" width="42" height="42" rx="12" fill="#A7B8FF"/>
+    <rect x="736" y="74" width="42" height="42" rx="12" fill="#F5F7FB" stroke="#2D3858"/>
+  </g>
+</svg>

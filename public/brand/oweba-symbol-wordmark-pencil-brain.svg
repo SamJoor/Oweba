@@ -1,0 +1,39 @@
+<svg width="900" height="220" viewBox="0 0 900 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Oweba Pencil Brain</title>
+  <rect width="900" height="220" rx="28" fill="#F8F4EC"/>
+  <g opacity="0.4" stroke="#D6D0C6">
+    <path d="M18 34H882M18 58H882M18 82H882M18 106H882M18 130H882M18 154H882M18 178H882" />
+    <path d="M34 18V202M58 18V202M82 18V202M106 18V202M130 18V202M154 18V202M178 18V202" />
+  </g>
+  <rect x="28" y="28" width="168" height="168" rx="34" fill="#FFFDF8" stroke="#163A70" stroke-width="4"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M76 144C76 121 92 104 112 104C121 104 129 108 135 114C141 107 150 103 160 103" stroke="#163A70" stroke-width="8"/>
+    <path d="M77 144C77 160 90 172 108 172H132C149 172 161 162 163 147" stroke="#163A70" stroke-width="8"/>
+    <path d="M92 119C96 113 103 109 112 109" stroke="#2F6BFF" stroke-width="4"/>
+    <path d="M112 104C114 96 120 90 129 88C139 86 147 90 152 98" stroke="#163A70" stroke-width="8"/>
+    <path d="M143 64L170 91" stroke="#163A70" stroke-width="10"/>
+    <path d="M170 91L160 101" stroke="#2F6BFF" stroke-width="10"/>
+    <path d="M136 71L163 98" stroke="#F1C38B" stroke-width="10"/>
+    <path d="M131 66L136 71" stroke="#163A70" stroke-width="10"/>
+    <path d="M163 98L173 108" stroke="#163A70" stroke-width="10"/>
+    <path d="M126 61L131 66" stroke="#E88277" stroke-width="10"/>
+    <path d="M173 108L178 113" stroke="#B78B59" stroke-width="10"/>
+    <path d="M112 48V28" stroke="#8E96A4" stroke-width="3"/>
+    <path d="M48 112H28" stroke="#8E96A4" stroke-width="3"/>
+  </g>
+  <g opacity="0.36" stroke="#8E96A4" stroke-width="2">
+    <path d="M236 62H820" />
+    <path d="M236 108H820" />
+    <path d="M236 154H820" />
+    <path d="M266 54V164" />
+    <path d="M362 54L378 164" />
+    <path d="M402 54L418 164" />
+    <path d="M492 54V164" />
+    <path d="M586 54V164" />
+    <path d="M620 54V164" />
+    <path d="M706 54V164" />
+    <path d="M790 54L772 164" />
+    <path d="M828 54L846 164" />
+  </g>
+  <text x="236" y="136" fill="#163A70" font-family="Arial, Helvetica, sans-serif" font-size="90" font-weight="700" letter-spacing="10">OWEBA</text>
+</svg>

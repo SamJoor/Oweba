@@ -1,0 +1,31 @@
+<svg width="1200" height="920" viewBox="0 0 1200 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Oweba Concept 2 - Runway</title>
+  <rect width="1200" height="920" rx="36" fill="#FAFBFD"/>
+  <text x="64" y="86" fill="#0B1020" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="700" letter-spacing="3">OWEBA / CONCEPT 02 / RUNWAY</text>
+  <text x="64" y="118" fill="#56637F" font-family="Georgia, 'Times New Roman', serif" font-size="16">Editorial, sophisticated, sharp. Feels like a luxury studio rather than a tech startup.</text>
+  <rect x="72" y="156" width="1056" height="692" rx="32" fill="white" stroke="#E2E7F0"/>
+  <g transform="translate(118 214)">
+    <rect width="182" height="182" rx="36" fill="#0B1020"/>
+    <path d="M58 136L92 54L126 136H58Z" stroke="#FAFBFD" stroke-width="8"/>
+    <path d="M74 114H110" stroke="#A7B8FF" stroke-width="5"/>
+    <path d="M92 54V136" stroke="#2F6BFF" stroke-width="4"/>
+    <text x="228" y="112" fill="#0B1020" font-family="Georgia, 'Times New Roman', serif" font-size="102" font-weight="700" letter-spacing="6">Oweba</text>
+    <text x="234" y="150" fill="#56637F" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="5">SOPHISTICATED WEBSITES FOR BUSINESSES READY TO LOOK THE PART</text>
+  </g>
+  <g transform="translate(118 486)">
+    <text x="0" y="0" fill="#0B1020" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="2">SYSTEM</text>
+    <rect x="0" y="30" width="270" height="168" rx="24" fill="#F7F8FC" stroke="#E2E7F0"/>
+    <text x="30" y="114" fill="#0B1020" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700" letter-spacing="3">Oweba</text>
+    <rect x="302" y="30" width="168" height="168" rx="24" fill="#0B1020"/>
+    <path d="M360 144L394 62L428 144H360Z" stroke="#FAFBFD" stroke-width="7"/>
+    <path d="M376 120H412" stroke="#A7B8FF" stroke-width="4"/>
+    <rect x="502" y="30" width="110" height="52" rx="16" fill="#0B1020"/>
+    <text x="523" y="65" fill="#FAFBFD" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" letter-spacing="2">Oweba</text>
+    <rect x="636" y="30" width="110" height="52" rx="16" fill="#FAFBFD" stroke="#E2E7F0"/>
+    <text x="656" y="65" fill="#0B1020" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" letter-spacing="2">Oweba</text>
+    <rect x="502" y="112" width="38" height="38" rx="11" fill="#0B1020"/>
+    <rect x="550" y="112" width="38" height="38" rx="11" fill="#2F6BFF"/>
+    <rect x="598" y="112" width="38" height="38" rx="11" fill="#A7B8FF"/>
+    <rect x="646" y="112" width="38" height="38" rx="11" fill="#FAFBFD" stroke="#E2E7F0"/>
+  </g>
+</svg>
