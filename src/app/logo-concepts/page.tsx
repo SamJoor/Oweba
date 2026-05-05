@@ -5,19 +5,19 @@ const concepts = [
     name: "Signal Mark",
     file: "/brand/oweba-signal-mark.svg",
     note: "The final symbol. Crisp at small sizes, distinct in silhouette, and ready for favicon or profile use.",
-    surface: "light"
+    surface: "paper"
   },
   {
     name: "Signal Wordmark",
     file: "/brand/oweba-signal-wordmark.svg",
     note: "The final wordmark system. A stronger custom WEBA build paired with the signal symbol as the leading O.",
-    surface: "light"
+    surface: "paper"
   },
   {
     name: "Signal Lockup",
     file: "/brand/oweba-signal-lockup.svg",
     note: "The polished final lockup for brand boards, proposals, and production use across the site.",
-    surface: "light"
+    surface: "paper"
   }
 ] as const;
 
