@@ -6,8 +6,11 @@ import { Button } from "@/components/ui/button";
 import { SurfaceCard } from "@/components/ui/card";
 import { FormStatus } from "@/components/forms/form-status";
 import { InputField, TextareaField } from "@/components/forms/form-field";
+import { contactSchema } from "@/lib/schemas";
 
 type Errors = Partial<Record<"name" | "businessName" | "email" | "phone" | "message", string[]>>;
+
+const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
 export function ContactForm() {
   const router = useRouter();
@@ -23,19 +26,53 @@ export function ContactForm() {
 
     const formData = new FormData(event.currentTarget);
     const payload = Object.fromEntries(formData.entries());
+    const parsed = contactSchema.safeParse(payload);
 
-    const response = await fetch("/api/contact", {
+    if (!parsed.success) {
+      setLoading(false);
+      setErrors(parsed.error.flatten().fieldErrors);
+      setError("Please fix the highlighted fields and try again.");
+      return;
+    }
+
+    if (parsed.data.website) {
+      setLoading(false);
+      setError("Spam submission blocked.");
+      return;
+    }
+
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+
+    if (!accessKey) {
+      setLoading(false);
+      setError("The contact form is not configured yet.");
+      return;
+    }
+
+    const response = await fetch(WEB3FORMS_ENDPOINT, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: JSON.stringify({
+        access_key: accessKey,
+        from_name: "Oweba Website",
+        subject: `New Oweba call request from ${parsed.data.businessName}`,
+        inquiry_type: "Book a call",
+        name: parsed.data.name,
+        business_name: parsed.data.businessName,
+        email: parsed.data.email,
+        phone: parsed.data.phone,
+        message: parsed.data.message
+      })
     });
 
-    const json = await response.json();
+    const json = await response.json().catch(() => null);
     setLoading(false);
 
-    if (!response.ok) {
-      setError(json.message || "Something went wrong.");
-      setErrors(json.errors || {});
+    if (!response.ok || !json?.success) {
+      setError(json?.message || "We couldn't send your message right now. Please try again in a moment.");
       return;
     }
 

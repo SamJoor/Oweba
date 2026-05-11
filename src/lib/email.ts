@@ -1,88 +1,73 @@
-import nodemailer from "nodemailer";
-import { ContactInput, QuoteInput } from "@/lib/schemas";
 import { PreviewOutput } from "@/lib/preview";
+import { ContactInput, QuoteInput } from "@/lib/schemas";
 
-type EmailConfig = {
-  to: string;
-  from: string;
-  host: string;
-  port: number;
-  user: string;
-  pass: string;
-};
+const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
-type SmtpError = Error & {
-  code?: string;
-  command?: string;
-  response?: string;
-  responseCode?: number;
+type Web3FormsResponse = {
+  success?: boolean;
+  message?: string;
+  body?: {
+    message?: string;
+  };
 };
 
 export class EmailConfigurationError extends Error {
-  constructor(message = "Email service is not configured.") {
+  constructor(message = "Web3Forms is not configured.") {
     super(message);
     this.name = "EmailConfigurationError";
   }
 }
 
-function getEmailConfig(): EmailConfig {
-  const to = process.env.CONTACT_TO_EMAIL;
-  const from = process.env.CONTACT_FROM_EMAIL;
-  const host = process.env.SMTP_HOST;
-  const port = Number(process.env.SMTP_PORT || 587);
-  const user = process.env.SMTP_USER;
-  const pass = process.env.SMTP_PASS;
+export class EmailDeliveryError extends Error {
+  status?: number;
 
-  if (!to || !from || !host || !user || !pass) {
-    throw new EmailConfigurationError(
-      "Email service is missing CONTACT_TO_EMAIL, CONTACT_FROM_EMAIL, SMTP_HOST, SMTP_USER, or SMTP_PASS."
-    );
+  constructor(message: string, status?: number) {
+    super(message);
+    this.name = "EmailDeliveryError";
+    this.status = status;
   }
-
-  if (!Number.isFinite(port)) {
-    throw new EmailConfigurationError("SMTP_PORT must be a valid number.");
-  }
-
-  return { to, from, host, port, user, pass };
 }
 
-function getTransporter() {
-  const config = getEmailConfig();
+function getAccessKey() {
+  const accessKey = process.env.WEB3FORMS_ACCESS_KEY || process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
 
-  return {
-    config,
-    transporter: nodemailer.createTransport({
-      host: config.host,
-      port: config.port,
-      secure: config.port === 465,
-      auth: {
-        user: config.user,
-        pass: config.pass
-      }
+  if (!accessKey) {
+    throw new EmailConfigurationError("Email service is missing NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY.");
+  }
+
+  return accessKey;
+}
+
+async function submitWeb3Form(payload: Record<string, string>) {
+  const response = await fetch(WEB3FORMS_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json"
+    },
+    body: JSON.stringify({
+      access_key: getAccessKey(),
+      from_name: "Oweba Website",
+      ...payload
     })
-  };
+  });
+
+  const json = (await response.json().catch(() => null)) as Web3FormsResponse | null;
+
+  if (!response.ok || !json?.success) {
+    throw new EmailDeliveryError(
+      json?.message || json?.body?.message || "Web3Forms could not send the form submission.",
+      response.status
+    );
+  }
 }
 
 export function describeEmailError(error: unknown) {
-  if (error instanceof EmailConfigurationError) {
+  if (error instanceof EmailConfigurationError || error instanceof EmailDeliveryError) {
     return error.message;
   }
 
   if (error instanceof Error) {
-    const smtpError = error as SmtpError;
-
-    if (smtpError.response?.includes("SmtpClientAuthentication is disabled")) {
-      return "SMTP client authentication is disabled for this Outlook mailbox.";
-    }
-
-    if (smtpError.responseCode === 535 || smtpError.code === "EAUTH") {
-      return "SMTP rejected the login. Check the mailbox, app password, and whether SMTP AUTH is enabled.";
-    }
-
-    if (smtpError.code === "ECONNECTION" || smtpError.code === "ETIMEDOUT") {
-      return "SMTP could not connect. Check SMTP_HOST and SMTP_PORT.";
-    }
-
     return error.message;
   }
 
@@ -95,15 +80,10 @@ export function logEmailError(context: string, error: unknown) {
     return;
   }
 
-  const smtpError = error as SmtpError;
-
   console.error(context, {
     name: error.name,
     message: describeEmailError(error),
-    code: smtpError.code,
-    command: smtpError.command,
-    responseCode: smtpError.responseCode,
-    response: smtpError.response
+    status: error instanceof EmailDeliveryError ? error.status : undefined
   });
 }
 
@@ -125,64 +105,36 @@ export function getQuoteFailureMessage(error: unknown) {
 }
 
 export async function sendContactNotification(input: ContactInput) {
-  const mailer = getTransporter();
-
-  await mailer.transporter.sendMail({
-    from: mailer.config.from,
-    to: mailer.config.to,
-    replyTo: input.email,
-    subject: `New Oweba contact inquiry from ${input.businessName}`,
-    text: [
-      `Name: ${input.name}`,
-      `Business: ${input.businessName}`,
-      `Email: ${input.email}`,
-      `Phone: ${input.phone}`,
-      "",
-      input.message,
-    ].join("\n"),
+  await submitWeb3Form({
+    subject: `New Oweba call request from ${input.businessName}`,
+    name: input.name,
+    email: input.email,
+    phone: input.phone,
+    business_name: input.businessName,
+    inquiry_type: "Book a call",
+    message: input.message
   });
 }
 
 export async function sendQuoteNotification(input: QuoteInput) {
-  const mailer = getTransporter();
-
-  await mailer.transporter.sendMail({
-    from: mailer.config.from,
-    to: mailer.config.to,
-    replyTo: input.email,
+  await submitWeb3Form({
     subject: `New Oweba quote request from ${input.businessName}`,
-    text: [
-      `Name: ${input.name}`,
-      `Business: ${input.businessName}`,
-      `Email: ${input.email}`,
-      `Phone: ${input.phone}`,
-      `Website: ${input.websiteUrl || "N/A"}`,
-      `Industry: ${input.industry}`,
-      `Budget: ${input.budgetRange}`,
-      `Timeline: ${input.timeline}`,
-      "",
-      `Needs: ${input.needs}`,
-      "",
-      `Goals: ${input.goals}`,
-    ].join("\n"),
+    name: input.name,
+    email: input.email,
+    phone: input.phone,
+    business_name: input.businessName,
+    website_url: input.websiteUrl || "N/A",
+    industry: input.industry,
+    budget_range: input.budgetRange,
+    timeline: input.timeline,
+    needs: input.needs,
+    goals: input.goals
   });
 }
 
 export async function sendPreviewNotification(email: string, businessName: string, preview: PreviewOutput) {
-  if (!email) return;
-  const mailer = getTransporter();
-
-  await mailer.transporter.sendMail({
-    from: mailer.config.from,
-    to: email,
-    subject: `Your Oweba preview for ${businessName}`,
-    text: [
-      preview.headline,
-      "",
-      preview.supportingCopy,
-      "",
-      "Suggested sections:",
-      ...preview.sections.map((section) => `- ${section.title}: ${section.copy}`),
-    ].join("\n"),
-  });
+  void email;
+  void businessName;
+  void preview;
+  return;
 }

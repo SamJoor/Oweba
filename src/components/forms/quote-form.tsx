@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { SurfaceCard } from "@/components/ui/card";
 import { FormStatus } from "@/components/forms/form-status";
 import { InputField, SelectField, TextareaField } from "@/components/forms/form-field";
+import { quoteSchema } from "@/lib/schemas";
 
 type Errors = Partial<
   Record<
@@ -13,6 +14,8 @@ type Errors = Partial<
     string[]
   >
 >;
+
+const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
 export function QuoteForm() {
   const router = useRouter();
@@ -28,19 +31,58 @@ export function QuoteForm() {
 
     const formData = new FormData(event.currentTarget);
     const payload = Object.fromEntries(formData.entries());
+    const parsed = quoteSchema.safeParse(payload);
 
-    const response = await fetch("/api/quote", {
+    if (!parsed.success) {
+      setLoading(false);
+      setErrors(parsed.error.flatten().fieldErrors);
+      setError("Please fix the highlighted fields and try again.");
+      return;
+    }
+
+    if (parsed.data.website) {
+      setLoading(false);
+      setError("Spam submission blocked.");
+      return;
+    }
+
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+
+    if (!accessKey) {
+      setLoading(false);
+      setError("The quote form is not configured yet.");
+      return;
+    }
+
+    const response = await fetch(WEB3FORMS_ENDPOINT, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: JSON.stringify({
+        access_key: accessKey,
+        from_name: "Oweba Website",
+        subject: `New Oweba quote request from ${parsed.data.businessName}`,
+        inquiry_type: "Request a quote",
+        name: parsed.data.name,
+        business_name: parsed.data.businessName,
+        email: parsed.data.email,
+        phone: parsed.data.phone,
+        website_url: parsed.data.websiteUrl || "N/A",
+        industry: parsed.data.industry,
+        budget_range: parsed.data.budgetRange,
+        timeline: parsed.data.timeline,
+        needs: parsed.data.needs,
+        goals: parsed.data.goals
+      })
     });
 
-    const json = await response.json();
+    const json = await response.json().catch(() => null);
     setLoading(false);
 
-    if (!response.ok) {
-      setError(json.message || "Something went wrong.");
-      setErrors(json.errors || {});
+    if (!response.ok || !json?.success) {
+      setError(json?.message || "We couldn't submit your request right now. Please try again shortly.");
       return;
     }
 
