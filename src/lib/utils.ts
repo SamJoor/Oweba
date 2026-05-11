@@ -8,7 +8,3 @@ export function cn(...inputs: ClassValue[]) {
 export function formatCurrency(value: string) {
   return value.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
-
-export function getCalendlyUrl() {
-  return process.env.NEXT_PUBLIC_CALENDLY_URL || "/contact?intent=book";
-}

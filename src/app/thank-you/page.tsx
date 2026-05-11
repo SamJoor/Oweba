@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { ButtonLink } from "@/components/ui/button";
 import { buildMetadata } from "@/lib/metadata";
-import { getCalendlyUrl } from "@/lib/utils";
 
 export const metadata = buildMetadata({
   title: "Thank you",
@@ -27,10 +26,10 @@ export default async function ThankYouPage({
             {isQuote ? "Your quote request is in." : "Your message has been sent."}
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[#1F2937]/76 md:text-lg">
-            We’ll review the details and reply with the right next step. If you want to move faster, you can also book a discovery call right now.
+            We’ll review the details and reply with the right next step. If you want to share more context, you can also request a call.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <ButtonLink href={getCalendlyUrl()} target="_blank" rel="noreferrer">
+            <ButtonLink href="/contact">
               Book a call
             </ButtonLink>
             <ButtonLink href="/" variant="secondary">

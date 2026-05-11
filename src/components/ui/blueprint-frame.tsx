@@ -14,13 +14,13 @@ export function BlueprintFrame({
   return (
     <div
       className={cn(
-        "relative overflow-hidden rounded-[34px] border border-[#163A70]/10 bg-white/78 p-6 shadow-[0_22px_50px_rgba(22,58,112,0.09)] md:p-8",
+        "relative overflow-hidden rounded-[22px] border border-[#163A70]/10 bg-white/82 p-5 shadow-[0_14px_34px_rgba(22,58,112,0.07)] md:rounded-[34px] md:p-8 md:shadow-[0_22px_50px_rgba(22,58,112,0.09)]",
         className
       )}
     >
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(22,58,112,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(22,58,112,0.03)_1px,transparent_1px)] bg-[size:28px_28px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(22,58,112,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(22,58,112,0.025)_1px,transparent_1px)] bg-[size:34px_34px] md:bg-[size:28px_28px]" />
       {(label || meta) ? (
-        <div className="relative mb-6 flex items-center justify-between gap-4 text-[10px] uppercase tracking-[0.22em] text-[#163A70]/40">
+        <div className="relative mb-4 flex items-center justify-between gap-4 text-[10px] uppercase tracking-[0.16em] text-[#163A70]/40 md:mb-6 md:tracking-[0.22em]">
           <span>{label}</span>
           <span>{meta}</span>
         </div>

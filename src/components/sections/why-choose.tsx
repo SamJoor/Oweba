@@ -26,8 +26,8 @@ const items = [
 
 export function WhyChooseSection() {
   return (
-    <section id="why-oweba" className="section-divider py-10 md:py-12 scroll-mt-32">
-      <Container className="space-y-6">
+    <section id="why-oweba" className="section-divider py-8 scroll-mt-32 md:py-12">
+      <Container className="space-y-5 md:space-y-6">
         <div className="flex items-center gap-3">
           <span className="h-px w-10 bg-white/18" />
           <motion.div
@@ -54,20 +54,20 @@ export function WhyChooseSection() {
           </motion.div>
         </div>
 
-        <div className="grid gap-6 xl:grid-cols-[0.96fr_1.04fr] xl:items-start">
-          <div className="space-y-5">
+        <div className="grid gap-4 md:gap-6 xl:grid-cols-[0.96fr_1.04fr] xl:items-start">
+          <div className="space-y-4 md:space-y-5">
             <div className="max-w-4xl space-y-4 text-[#F8F4EC]">
               <h3
-                className="max-w-3xl text-[2rem] font-normal leading-[1.06] tracking-[-0.03em] md:text-[2.7rem]"
+                className="max-w-3xl text-[1.55rem] font-normal leading-[1.14] tracking-normal md:text-[2.7rem] md:leading-[1.06] md:tracking-[-0.03em]"
                 style={{ color: "#F8F4EC" }}
               >
                 Our mission is to provide enterprise quality websites that perform.
               </h3>
             </div>
 
-            <SurfaceCard className="faux-3d-card overflow-hidden rounded-[28px] border-[#163A70]/10 bg-[#E7E1D6] p-0">
+            <SurfaceCard className="faux-3d-card overflow-hidden rounded-[20px] border-[#163A70]/10 bg-[#E7E1D6] p-0 md:rounded-[28px]">
               <div className="grid gap-0 md:grid-cols-[0.9fr_1.1fr]">
-                <div className="relative min-h-[160px] border-b border-[#163A70]/8 md:min-h-[190px] md:border-b-0 md:border-r">
+                <div className="relative min-h-[130px] border-b border-[#163A70]/8 md:min-h-[190px] md:border-b-0 md:border-r">
                   <Image
                     src="/brand/why-oweba-blueprint.jpg"
                     alt="A designer sketching website layouts across large blueprint boards"
@@ -84,7 +84,7 @@ export function WhyChooseSection() {
                 <div className="flex flex-col justify-center gap-3 p-4 md:p-5">
                   <div className="space-y-2">
                     <p className="eyebrow-label text-[#163A70]/46">What that means in practice</p>
-                    <p className="text-lg leading-tight text-[#163A70] md:text-[1.35rem]">
+                    <p className="text-[1.05rem] leading-tight text-[#163A70] md:text-[1.35rem]">
                       A Focus on Building for your Growth, Not Just Building a Site.
                     </p>
                     <p className="text-sm leading-6 text-[#1F2937]/74">
@@ -98,13 +98,13 @@ export function WhyChooseSection() {
 
           <div className="grid gap-3 xl:pt-1">
             {items.map((item, index) => (
-              <SurfaceCard key={item.title} className={`faux-3d-card grid gap-3 rounded-[24px] p-5 md:grid-cols-[72px_1fr] md:items-start ${index === 1 ? "xl:ml-4" : index === 2 ? "xl:ml-8" : ""}`}>
+              <SurfaceCard key={item.title} className={`faux-3d-card grid gap-3 rounded-[20px] p-4 md:grid-cols-[72px_1fr] md:items-start md:rounded-[24px] md:p-5 ${index === 1 ? "xl:ml-4" : index === 2 ? "xl:ml-8" : ""}`}>
                 <div className="border-b border-[#163A70]/8 pb-3 md:border-b-0 md:border-r md:pb-0 md:pr-4">
                   <p className="font-[var(--font-sora)] text-2xl text-[#2F6BFF]">{item.label}</p>
                   <p className="mt-2 text-[10px] uppercase tracking-[0.2em] text-[#163A70]/42">Reason</p>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-[1.32rem] leading-[1.05]">{item.title}</h3>
+                  <h3 className="text-[1.15rem] leading-[1.1] md:text-[1.32rem] md:leading-[1.05]">{item.title}</h3>
                   <p className="max-w-2xl text-[0.94rem] leading-6 text-[#1F2937]/76">{item.copy}</p>
                 </div>
               </SurfaceCard>

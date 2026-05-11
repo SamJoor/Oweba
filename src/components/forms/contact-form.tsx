@@ -46,9 +46,9 @@ export function ContactForm() {
     <SurfaceCard className="space-y-5 border-[#163A70]/10">
       <div>
         <p className="text-xs uppercase tracking-[0.18em] text-[#2F6BFF]">Sheet C-01</p>
-        <h3 className="text-2xl">General inquiry</h3>
+        <h3 className="text-2xl">Book a call</h3>
         <p className="mt-2 text-sm leading-7 text-[#1F2937]/76">
-          Best for businesses that know they need a better website and want to start the conversation.
+          Share a little context and the best way to reach you. We will reply with a good time to talk through fit, timing, and next steps.
         </p>
       </div>
       <form className="grid gap-4" onSubmit={handleSubmit}>
@@ -61,15 +61,15 @@ export function ContactForm() {
           <InputField label="Phone" name="phone" placeholder="(555) 123-4567" error={errors.phone?.[0]} />
         </div>
         <TextareaField
-          label="What are you trying to improve?"
+          label="What should we cover on the call?"
           name="message"
-          placeholder="Tell us about your current website, your business, and what you want the new site to do better."
+          placeholder="Tell us what prompted the call, what you are considering, and any timing details we should know."
           error={errors.message?.[0]}
         />
         <input type="text" name="website" className="hidden" tabIndex={-1} autoComplete="off" />
         <FormStatus error={error} />
         <Button type="submit" disabled={loading} className="w-full">
-          {loading ? "Sending..." : "Send inquiry"}
+          {loading ? "Sending..." : "Request a call"}
         </Button>
       </form>
     </SurfaceCard>

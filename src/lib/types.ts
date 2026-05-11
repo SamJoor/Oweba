@@ -4,6 +4,8 @@ export type Service = {
   summary: string;
   bullets: string[];
   startingAt: string;
+  monthlySupportAt: string;
+  monthlyGrowthAt: string;
 };
 
 export type PortfolioItem = {

@@ -15,7 +15,7 @@ export function SectionHeading({
   invert?: boolean;
 }) {
   return (
-    <div className={cn("max-w-4xl space-y-5 md:space-y-6", align === "center" && "mx-auto text-center")}>
+    <div className={cn("max-w-4xl space-y-4 md:space-y-6", align === "center" && "mx-auto text-center")}>
       {eyebrow ? (
         <div className={cn("flex items-center gap-3", align === "center" && "justify-center")}>
           <span className={cn("h-px w-10 bg-[#163A70]/18", invert && "bg-white/18")} />
@@ -31,14 +31,14 @@ export function SectionHeading({
       ) : null}
       <div className="space-y-3 md:space-y-4">
         <h2
-          className={cn("max-w-4xl text-4xl leading-[1.02] tracking-[-0.045em] md:text-6xl", invert && "text-[#F8F4EC]")}
+          className={cn("max-w-4xl text-[2.05rem] leading-[1.08] tracking-normal md:text-6xl md:leading-[1.02]", invert && "text-[#F8F4EC]")}
           style={invert ? { color: "#F8F4EC" } : undefined}
         >
           {title}
         </h2>
         {description ? (
           <p
-            className={cn("max-w-2xl text-[1.02rem] leading-8 text-[#1F2937]/78 md:text-[1.12rem] md:leading-9", invert && "text-[#F8F4EC]/76")}
+            className={cn("max-w-2xl text-[0.98rem] leading-7 text-[#1F2937]/78 md:text-[1.12rem] md:leading-9", invert && "text-[#F8F4EC]/76")}
             style={invert ? { color: "rgba(248, 244, 236, 0.76)" } : undefined}
           >
             {description}

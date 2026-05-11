@@ -550,20 +550,6 @@ function Sequence({ cfg }: { cfg: IntroConfig }) {
             <line x1="0" y1="0" x2="100" y2="100" stroke={cfg.ink} strokeWidth="0.3" vectorEffect="non-scaling-stroke" />
             <line x1="100" y1="0" x2="0" y2="100" stroke={cfg.ink} strokeWidth="0.3" vectorEffect="non-scaling-stroke" />
           </svg>
-          <div
-            className="bpi-mono"
-            style={{
-              position: "absolute",
-              top: 10,
-              right: 10,
-              fontSize: 8,
-              color: `${cfg.ink}b3`,
-              opacity: 0,
-              animation: `bpi-fade ${scaleMs(cfg, 400)}ms ease-out ${scaleMs(cfg, 2400)}ms forwards`
-            }}
-          >
-            WebGL concept board
-          </div>
         </div>
       </Animated>
 

@@ -4,7 +4,6 @@ import { siteConfig } from "@/lib/site";
 import { OwebaLogo } from "@/components/brand/oweba-logo";
 import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { getCalendlyUrl } from "@/lib/utils";
 
 export function SiteFooter() {
   return (
@@ -25,7 +24,7 @@ export function SiteFooter() {
             <ButtonLink href="/contact" variant="primary">
               Request a quote
             </ButtonLink>
-            <ButtonLink href={getCalendlyUrl()} target="_blank" rel="noreferrer" variant="secondary" className="border-white/20 bg-white/8 text-[#F8F4EC] hover:bg-white/12">
+            <ButtonLink href="/contact" variant="secondary" className="border-white/20 bg-white/8 text-[#F8F4EC] hover:bg-white/12">
               Book a call
             </ButtonLink>
           </div>

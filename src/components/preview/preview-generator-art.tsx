@@ -6,7 +6,6 @@ import { Button, ButtonLink } from "@/components/ui/button";
 import { SurfaceCard } from "@/components/ui/card";
 import { FormStatus } from "@/components/forms/form-status";
 import { InputField, SelectField } from "@/components/forms/form-field";
-import { getCalendlyUrl } from "@/lib/utils";
 import type { PreviewOutput } from "@/lib/preview";
 import { BlueprintOverlay } from "@/components/ui/blueprint-overlay";
 
@@ -194,7 +193,7 @@ export function PreviewGeneratorArt() {
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <ButtonLink href="/contact">Request a quote</ButtonLink>
-                    <ButtonLink href={getCalendlyUrl()} target="_blank" rel="noreferrer" variant="secondary">
+                      <ButtonLink href="/contact" variant="secondary">
                       Book a call
                     </ButtonLink>
                   </div>

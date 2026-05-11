@@ -1,6 +1,5 @@
 import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { getCalendlyUrl } from "@/lib/utils";
 
 export function FinalCta({
   title = "If your website feels behind the business, Oweba can close that gap.",
@@ -21,7 +20,7 @@ export function FinalCta({
             </div>
             <div className="flex flex-wrap gap-3">
               <ButtonLink href="/contact">Request a quote</ButtonLink>
-              <ButtonLink href={getCalendlyUrl()} target="_blank" rel="noreferrer" variant="secondary" className="border-white/20 bg-white/8 text-[#F8F4EC] hover:bg-white/14">
+              <ButtonLink href="/contact" variant="secondary" className="border-white/20 bg-white/8 text-[#F8F4EC] hover:bg-white/14">
                 Book a call
               </ButtonLink>
             </div>

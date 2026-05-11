@@ -1,4 +1,3 @@
-import { FinalCta } from "@/components/sections/final-cta";
 import { PricingBoard } from "@/components/sections/pricing-board";
 import { PageHero } from "@/components/layout/page-hero";
 import { buildMetadata } from "@/lib/metadata";
@@ -18,7 +17,6 @@ export default function PricingPage() {
         description="Every proposal is tailored, but transparent starting prices help businesses know whether Oweba is the right fit before the first call."
       />
       <PricingBoard />
-      <FinalCta />
     </>
   );
 }

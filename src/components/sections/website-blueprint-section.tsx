@@ -4,7 +4,6 @@ import { useState } from "react";
 import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-title";
-import { getCalendlyUrl } from "@/lib/utils";
 
 const blueprintViews = [
   {
@@ -104,7 +103,7 @@ export function WebsiteBlueprintSection() {
                 </div>
                 <div className="flex flex-wrap gap-3 pt-2">
                   <ButtonLink href="/work">See examples</ButtonLink>
-                  <ButtonLink href={getCalendlyUrl()} target="_blank" rel="noreferrer" variant="secondary">
+                    <ButtonLink href="/contact" variant="secondary">
                     Book a call
                   </ButtonLink>
                 </div>

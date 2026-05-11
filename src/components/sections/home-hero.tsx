@@ -5,7 +5,6 @@ import { ArrowRight } from "lucide-react";
 import { HeroBlueprintScene } from "@/components/three/hero-blueprint-scene";
 import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { getCalendlyUrl } from "@/lib/utils";
 
 export function HomeHero() {
   const prefersReducedMotion = useReducedMotion();
@@ -33,10 +32,10 @@ export function HomeHero() {
   } as const;
 
   return (
-    <section className="pb-10 pt-4 md:pb-14 md:pt-5">
+    <section className="pb-8 pt-3 md:pb-14 md:pt-5">
       <Container>
         <motion.div
-          className="relative overflow-hidden rounded-[26px] border border-[rgba(255,255,255,0.46)] bg-[rgba(255,255,255,0.36)] px-6 pb-7 pt-20 shadow-[0_28px_80px_rgba(22,58,112,0.1)] backdrop-blur-xl md:min-h-[clamp(35rem,74svh,41rem)] md:px-10 md:pb-7 md:pt-20 xl:px-14 xl:pb-8"
+          className="relative overflow-hidden rounded-[24px] border border-[rgba(255,255,255,0.46)] bg-[rgba(255,255,255,0.72)] px-5 pb-6 pt-16 shadow-[0_18px_44px_rgba(22,58,112,0.08)] backdrop-blur-xl md:min-h-[clamp(35rem,74svh,41rem)] md:rounded-[26px] md:bg-[rgba(255,255,255,0.36)] md:px-10 md:pb-7 md:pt-20 md:shadow-[0_28px_80px_rgba(22,58,112,0.1)] xl:px-14 xl:pb-8"
           onMouseMove={(event) => {
             if (prefersReducedMotion) return;
             const rect = event.currentTarget.getBoundingClientRect();
@@ -49,23 +48,23 @@ export function HomeHero() {
           }}
           style={{ perspective: 1800 }}
         >
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(22,58,112,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(22,58,112,0.03)_1px,transparent_1px)] bg-[size:38px_38px] opacity-55" />
+          <div className="absolute inset-0 hidden bg-[linear-gradient(rgba(22,58,112,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(22,58,112,0.03)_1px,transparent_1px)] bg-[size:38px_38px] opacity-55 md:block" />
           <motion.div className="absolute inset-0 opacity-70" style={{ background: glare }} />
           <motion.div className="absolute -left-[8%] top-[-12%] h-[130%] w-[32%] rotate-[22deg] border border-[#163A70]/14" style={{ x: frameTranslateX, y: frameTranslateY }} />
           <motion.div className="absolute -right-[6%] top-[6%] h-[88%] w-[36%] rotate-[10deg] border border-[#163A70]/14" style={{ x: boardTranslateX, y: boardTranslateY }} />
           <motion.div className="absolute left-[2%] top-[8%] h-px w-[35%] bg-[#163A70]/14" style={{ x: frameTranslateX }} />
           <motion.div className="absolute right-[4%] bottom-[11%] h-px w-[32%] bg-[#163A70]/14" style={{ x: boardTranslateX }} />
           <motion.div className="absolute left-[1.5%] bottom-[19%] h-[34%] w-px bg-[#163A70]/12" style={{ y: frameTranslateY }} />
-          <div className="absolute inset-x-6 top-12 flex items-center justify-between text-[10px] uppercase tracking-[0.22em] text-[#1F2937]/40 md:inset-x-10 xl:inset-x-14">
+          <div className="absolute inset-x-5 top-8 flex items-center justify-between text-[10px] uppercase tracking-[0.14em] text-[#1F2937]/40 md:inset-x-10 md:top-12 md:tracking-[0.22em] xl:inset-x-14">
             <span>Sheet H-01</span>
-            <span>Website architecture for growth</span>
+            <span className="hidden sm:inline">Website architecture for growth</span>
           </div>
           <motion.div className="absolute -left-12 top-[30%] h-[1px] w-24 rotate-[90deg] bg-[#163A70]/12" style={{ y: frameTranslateY }} />
           <motion.div className="absolute -right-12 bottom-[22%] h-[1px] w-24 rotate-[90deg] bg-[#163A70]/12" style={{ y: boardTranslateY }} />
           <div className="relative grid gap-8 md:gap-10 lg:grid-cols-[0.94fr_1.06fr] lg:items-center xl:gap-12">
-            <div className="space-y-7 md:space-y-8">
-              <div className="max-w-4xl space-y-6">
-                <h1 className="max-w-[16ch] md:max-w-none font-semibold tracking-[-0.02em] text-[#1F2937]" style={heroHeadlineStyle}>
+            <div className="space-y-6 md:space-y-8">
+              <div className="max-w-4xl space-y-4 md:space-y-6">
+                <h1 className="max-w-[15ch] font-semibold tracking-normal text-[#1F2937] md:max-w-none md:tracking-[-0.02em]" style={heroHeadlineStyle}>
                   <span className="relative block text-balance md:whitespace-nowrap">
                     Your business does serious work.
                     <span className="absolute -left-4 top-[1.08em] h-px w-[calc(100%+1.1rem)] bg-[#2F6BFF]/34" />
@@ -76,21 +75,21 @@ export function HomeHero() {
                     <span className="absolute -left-4 top-[1.08em] h-px w-[calc(100%+1.3rem)] bg-[#2F6BFF]/34" />
                   </span>
                 </h1>
-                <p className="max-w-xl text-[1.02rem] leading-7 text-[#1F2937]/78 md:text-[1.08rem] md:leading-8">
+                <p className="max-w-xl text-[0.98rem] leading-7 text-[#1F2937]/78 md:text-[1.08rem] md:leading-8">
                   Oweba creates bespoke digital architectures for small and medium businesses. Crafted, intelligent, and built to perform.
                 </p>
               </div>
-              <div className="flex flex-col items-start gap-3 pt-1 sm:flex-row sm:flex-wrap sm:items-center md:gap-4">
-                <ButtonLink href="/contact" size="hero">
+              <div className="flex flex-col items-stretch gap-3 pt-1 sm:flex-row sm:flex-wrap sm:items-center md:gap-4">
+                <ButtonLink href="/contact" size="hero" className="w-full sm:w-auto">
                   Request a quote
                 </ButtonLink>
-                <ButtonLink href={getCalendlyUrl()} size="hero" variant="ghost" target="_blank" rel="noreferrer" className="gap-2 px-2">
+                <ButtonLink href="/contact" size="hero" variant="secondary" className="w-full gap-2 sm:w-auto">
                   Book a call <ArrowRight size={18} />
                 </ButtonLink>
               </div>
             </div>
 
-            <div className="relative min-h-[21rem] lg:min-h-[29rem]" style={{ perspective: "1600px" }}>
+            <div className="relative hidden min-h-[21rem] md:block lg:min-h-[29rem]" style={{ perspective: "1600px" }}>
               <motion.div className="absolute inset-[6%_6%_2%_12%] rotate-[8deg] rounded-[24px] border border-[#E7E1D6]/70" style={{ x: frameTranslateX, y: frameTranslateY, rotateX: boardRotateX, rotateY: boardRotateY }} />
               <motion.div className="absolute inset-[3%_10%_10%_7%] rotate-[8deg] rounded-[24px] border border-[#163A70]/24" style={{ x: boardTranslateX, y: boardTranslateY, rotateX: boardRotateX, rotateY: boardRotateY }} />
               <motion.div className="absolute inset-[5%_4%_13%_10%] rotate-[8deg] rounded-[24px] border border-[#163A70]/16 bg-white/18" style={{ x: boardTranslateX, y: boardTranslateY, rotateX: boardRotateX, rotateY: boardRotateY }} />
@@ -113,7 +112,6 @@ export function HomeHero() {
                         <span className="h-2.5 w-2.5 rounded-full bg-[#F8F4EC]/82" />
                         <span className="h-2.5 w-2.5 rounded-full bg-[#2F6BFF]" />
                       </div>
-                      <span className="text-[10px] uppercase tracking-[0.18em] text-[#F8F4EC]/56">WebGL concept board</span>
                     </div>
                     <div className="h-[18.5rem] pt-5 md:h-[21rem]">
                       <HeroBlueprintScene />
@@ -134,7 +132,6 @@ export function HomeHero() {
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <span className="block">Client: SMB innovators</span>
                       <div className="h-px w-full bg-[#163A70]/10" />
                       <div className="grid grid-cols-2 gap-2">
                         <div className="h-7 border border-[#163A70]/10 bg-white/34" />
