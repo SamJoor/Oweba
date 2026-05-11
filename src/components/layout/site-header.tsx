@@ -9,11 +9,11 @@ import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 
 const headerLinks = [
+  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/#why-oweba", label: "Why Oweba" },
   { href: "/#our-stack", label: "Our Stack" },
   { href: "/work", label: "Our Work" },
-  { href: "/pricing", label: "Pricing" },
   { href: "/contact", label: "Contact" }
 ] as const;
 

@@ -1,11 +1,11 @@
 import { Article, FAQItem, PortfolioItem, Service } from "@/lib/types";
 
 export const navLinks = [
+  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/process", label: "Process" },
   { href: "/work", label: "Work" },
-  { href: "/pricing", label: "Pricing" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ];

@@ -7,8 +7,8 @@ export function MobileStickyCta() {
         <ButtonLink href="/contact" className="h-11 flex-1 px-4 text-sm">
           Book a call
         </ButtonLink>
-        <ButtonLink href="/pricing" className="h-11 flex-1 px-4 text-sm" variant="secondary">
-          Pricing
+        <ButtonLink href="/work" className="h-11 flex-1 px-4 text-sm" variant="secondary">
+          Work
         </ButtonLink>
       </div>
     </div>

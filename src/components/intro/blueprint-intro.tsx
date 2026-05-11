@@ -692,7 +692,7 @@ function TitleCell({
 const replayButtonStyle: CSSProperties = {
   position: "fixed",
   right: 20,
-  bottom: 20,
+  bottom: "calc(76px + env(safe-area-inset-bottom))",
   zIndex: 90,
   padding: "10px 18px",
   borderRadius: 999,
