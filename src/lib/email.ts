@@ -112,6 +112,9 @@ export async function sendContactNotification(input: ContactInput) {
     phone: input.phone,
     business_name: input.businessName,
     inquiry_type: "Book a call",
+    preferred_time_1: input.preferredTime1 || "N/A",
+    preferred_time_2: input.preferredTime2 || "N/A",
+    preferred_time_3: input.preferredTime3 || "N/A",
     message: input.message
   });
 }

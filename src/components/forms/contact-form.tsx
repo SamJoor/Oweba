@@ -8,7 +8,9 @@ import { FormStatus } from "@/components/forms/form-status";
 import { InputField, TextareaField } from "@/components/forms/form-field";
 import { contactSchema } from "@/lib/schemas";
 
-type Errors = Partial<Record<"name" | "businessName" | "email" | "phone" | "message", string[]>>;
+type Errors = Partial<
+  Record<"name" | "businessName" | "email" | "phone" | "preferredTime1" | "preferredTime2" | "preferredTime3" | "message", string[]>
+>;
 
 const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
@@ -64,6 +66,9 @@ export function ContactForm() {
         business_name: parsed.data.businessName,
         email: parsed.data.email,
         phone: parsed.data.phone,
+        preferred_time_1: parsed.data.preferredTime1 || "N/A",
+        preferred_time_2: parsed.data.preferredTime2 || "N/A",
+        preferred_time_3: parsed.data.preferredTime3 || "N/A",
         message: parsed.data.message
       })
     });
@@ -85,7 +90,7 @@ export function ContactForm() {
         <p className="text-xs uppercase tracking-[0.18em] text-[#2F6BFF]">Sheet C-01</p>
         <h3 className="text-2xl">Book a call</h3>
         <p className="mt-2 text-sm leading-7 text-[#1F2937]/76">
-          Share a little context and the best way to reach you. We will reply with a good time to talk through fit, timing, and next steps.
+          Send a few times that work for you and a quick note. We will confirm the best slot by email.
         </p>
       </div>
       <form className="grid gap-4" onSubmit={handleSubmit}>
@@ -97,10 +102,18 @@ export function ContactForm() {
           <InputField label="Email" type="email" name="email" placeholder="you@company.com" error={errors.email?.[0]} />
           <InputField label="Phone" name="phone" placeholder="(555) 123-4567" error={errors.phone?.[0]} />
         </div>
+        <div className="grid gap-4">
+          <p className="text-xs uppercase tracking-[0.14em] text-[#163A70]">Preferred call times</p>
+          <div className="grid gap-4 md:grid-cols-3">
+            <InputField label="Option 1" type="datetime-local" name="preferredTime1" error={errors.preferredTime1?.[0]} />
+            <InputField label="Option 2" type="datetime-local" name="preferredTime2" error={errors.preferredTime2?.[0]} />
+            <InputField label="Option 3" type="datetime-local" name="preferredTime3" error={errors.preferredTime3?.[0]} />
+          </div>
+        </div>
         <TextareaField
-          label="What should we cover on the call?"
+          label="Quick note"
           name="message"
-          placeholder="Tell us what prompted the call, what you are considering, and any timing details we should know."
+          placeholder="What are you looking for help with?"
           error={errors.message?.[0]}
         />
         <input type="text" name="website" className="hidden" tabIndex={-1} autoComplete="off" />
