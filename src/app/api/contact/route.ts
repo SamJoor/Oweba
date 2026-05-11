@@ -1,5 +1,5 @@
 import { parseBody, jsonError } from "@/lib/api";
-import { sendContactNotification } from "@/lib/email";
+import { getContactFailureMessage, logEmailError, sendContactNotification } from "@/lib/email";
 import { saveContactLead } from "@/lib/lead-store";
 import { contactSchema } from "@/lib/schemas";
 
@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     await Promise.all([saveContactLead(parsed.data), sendContactNotification(parsed.data)]);
     return Response.json({ success: true });
   } catch (error) {
-    console.error("Contact submission failed", error);
-    return jsonError("We couldn't send your message right now. Please try again in a moment.", 500);
+    logEmailError("Contact submission failed", error);
+    return jsonError(getContactFailureMessage(error), 500);
   }
 }

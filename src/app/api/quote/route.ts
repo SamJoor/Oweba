@@ -1,5 +1,5 @@
 import { parseBody, jsonError } from "@/lib/api";
-import { sendQuoteNotification } from "@/lib/email";
+import { getQuoteFailureMessage, logEmailError, sendQuoteNotification } from "@/lib/email";
 import { saveQuoteLead } from "@/lib/lead-store";
 import { quoteSchema } from "@/lib/schemas";
 
@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     await Promise.all([saveQuoteLead(parsed.data), sendQuoteNotification(parsed.data)]);
     return Response.json({ success: true });
   } catch (error) {
-    console.error("Quote submission failed", error);
-    return jsonError("We couldn't submit your request right now. Please try again shortly.", 500);
+    logEmailError("Quote submission failed", error);
+    return jsonError(getQuoteFailureMessage(error), 500);
   }
 }
