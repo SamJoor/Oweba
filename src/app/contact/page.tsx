@@ -15,12 +15,10 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Book a call or request a quote."
-        description="Use the path that fits your stage. Oweba keeps the first step simple so the project can move quickly if it is a good fit."
-        primaryHref="/contact"
-        primaryLabel="Book a call"
-        secondaryHref="/contact"
-        secondaryLabel="Request a quote"
+        title="Start with a quote request, a general inquiry, or a discovery call."
+        description="Pick the path that fits your stage. Oweba keeps the first step simple so the project can move quickly if it is a good fit."
+        primaryLabel={null}
+        secondaryLabel={null}
       />
       <section className="pb-16 md:pb-24">
         <Container>

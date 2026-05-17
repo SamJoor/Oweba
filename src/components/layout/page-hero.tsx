@@ -15,11 +15,13 @@ export function PageHero({
   title: string;
   description: string;
   primaryHref?: string;
-  primaryLabel?: string;
+  primaryLabel?: string | null;
   secondaryHref?: string;
-  secondaryLabel?: string;
+  secondaryLabel?: string | null;
 }) {
-  const external = secondaryHref.startsWith("http");
+  const showPrimary = Boolean(primaryLabel && primaryHref);
+  const showSecondary = Boolean(secondaryLabel && secondaryHref);
+  const external = showSecondary ? secondaryHref.startsWith("http") : false;
 
   return (
     <section className="pb-8 pt-10 md:pb-16 md:pt-24">
@@ -35,21 +37,27 @@ export function PageHero({
           <div className="absolute bottom-17 right-17 hidden h-0.5 w-8 bg-[#163A70]/10 md:block" />
           <div className="absolute bottom-8 right-[8.75rem] hidden h-8 w-0.5 bg-[#163A70]/10 md:block" />
           <SectionHeading eyebrow={eyebrow} title={title} description={description} />
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap md:mt-10">
-            <ButtonLink href={primaryHref} size="lg" className="w-full sm:w-auto">
-              {primaryLabel}
-            </ButtonLink>
-            <ButtonLink
-              href={secondaryHref}
-              variant="secondary"
-              size="lg"
-              target={external ? "_blank" : undefined}
-              rel={external ? "noreferrer" : undefined}
-              className="w-full sm:w-auto"
-            >
-              {secondaryLabel}
-            </ButtonLink>
-          </div>
+          {showPrimary || showSecondary ? (
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap md:mt-10">
+              {showPrimary ? (
+                <ButtonLink href={primaryHref} size="lg" className="w-full sm:w-auto">
+                  {primaryLabel}
+                </ButtonLink>
+              ) : null}
+              {showSecondary ? (
+                <ButtonLink
+                  href={secondaryHref}
+                  variant="secondary"
+                  size="lg"
+                  target={external ? "_blank" : undefined}
+                  rel={external ? "noreferrer" : undefined}
+                  className="w-full sm:w-auto"
+                >
+                  {secondaryLabel}
+                </ButtonLink>
+              ) : null}
+            </div>
+          ) : null}
         </div>
       </Container>
     </section>
