@@ -15,8 +15,6 @@ type Errors = Partial<
   >
 >;
 
-const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
-
 export function QuoteForm() {
   const router = useRouter();
   const [errors, setErrors] = useState<Errors>({});
@@ -46,36 +44,13 @@ export function QuoteForm() {
       return;
     }
 
-    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
-
-    if (!accessKey) {
-      setLoading(false);
-      setError("The quote form is not configured yet.");
-      return;
-    }
-
-    const response = await fetch(WEB3FORMS_ENDPOINT, {
+    const response = await fetch("/api/quote", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json"
       },
-      body: JSON.stringify({
-        access_key: accessKey,
-        from_name: "Oweba Website",
-        subject: `New Oweba quote request from ${parsed.data.businessName}`,
-        inquiry_type: "Request a quote",
-        name: parsed.data.name,
-        business_name: parsed.data.businessName,
-        email: parsed.data.email,
-        phone: parsed.data.phone,
-        website_url: parsed.data.websiteUrl || "N/A",
-        industry: parsed.data.industry,
-        budget_range: parsed.data.budgetRange,
-        timeline: parsed.data.timeline,
-        needs: parsed.data.needs,
-        goals: parsed.data.goals
-      })
+      body: JSON.stringify(parsed.data)
     });
 
     const json = await response.json().catch(() => null);
