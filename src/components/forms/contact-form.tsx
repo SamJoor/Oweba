@@ -12,8 +12,6 @@ type Errors = Partial<
   Record<"name" | "businessName" | "email" | "phone" | "preferredTime1" | "preferredTime2" | "preferredTime3" | "message", string[]>
 >;
 
-const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
-
 export function ContactForm() {
   const router = useRouter();
   const [errors, setErrors] = useState<Errors>({});
@@ -43,34 +41,13 @@ export function ContactForm() {
       return;
     }
 
-    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
-
-    if (!accessKey) {
-      setLoading(false);
-      setError("The contact form is not configured yet.");
-      return;
-    }
-
-    const response = await fetch(WEB3FORMS_ENDPOINT, {
+    const response = await fetch("/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json"
       },
-      body: JSON.stringify({
-        access_key: accessKey,
-        from_name: "Oweba Website",
-        subject: `New Oweba call request from ${parsed.data.businessName}`,
-        inquiry_type: "Book a call",
-        name: parsed.data.name,
-        business_name: parsed.data.businessName,
-        email: parsed.data.email,
-        phone: parsed.data.phone,
-        preferred_time_1: parsed.data.preferredTime1 || "N/A",
-        preferred_time_2: parsed.data.preferredTime2 || "N/A",
-        preferred_time_3: parsed.data.preferredTime3 || "N/A",
-        message: parsed.data.message
-      })
+      body: JSON.stringify(parsed.data)
     });
 
     const json = await response.json().catch(() => null);

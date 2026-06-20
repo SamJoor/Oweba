@@ -10,7 +10,7 @@ import { quoteSchema } from "@/lib/schemas";
 
 type Errors = Partial<
   Record<
-    "name" | "businessName" | "email" | "phone" | "websiteUrl" | "industry" | "needs" | "budgetRange" | "timeline" | "goals",
+    "name" | "businessName" | "email" | "phone" | "industry" | "needs" | "budgetRange" | "timeline" | "goals",
     string[]
   >
 >;
@@ -70,7 +70,7 @@ export function QuoteForm() {
         <p className="text-xs uppercase tracking-[0.18em] text-[#2F6BFF]">Sheet C-02</p>
         <h3 className="text-2xl">Request a quote</h3>
         <p className="mt-2 text-sm leading-7 text-[#1F2937]/76">
-          Best for businesses that already know the scope, timing, or outcome they want.
+          Share the basics and we will reply with the best next step.
         </p>
       </div>
       <form className="grid gap-4" onSubmit={handleSubmit}>
@@ -82,16 +82,14 @@ export function QuoteForm() {
           <InputField label="Email" type="email" name="email" placeholder="you@company.com" error={errors.email?.[0]} />
           <InputField label="Phone" name="phone" placeholder="(555) 123-4567" error={errors.phone?.[0]} />
         </div>
+        <InputField label="Business type" name="industry" placeholder="HVAC, law firm, dental, etc." error={errors.industry?.[0]} />
+        <TextareaField label="What do you need?" name="needs" placeholder="New website, redesign, landing page, or ongoing help." error={errors.needs?.[0]} />
         <div className="grid gap-4 md:grid-cols-2">
-          <InputField label="Website URL" name="websiteUrl" placeholder="https://yourwebsite.com" error={errors.websiteUrl?.[0]} />
-          <InputField label="Industry" name="industry" placeholder="Dental, legal, HVAC, etc." error={errors.industry?.[0]} />
-        </div>
-        <TextareaField label="What do you need?" name="needs" placeholder="Custom website, redesign, landing page, support, or a combination." error={errors.needs?.[0]} />
-        <div className="grid gap-4 md:grid-cols-2">
-          <SelectField label="Budget range" name="budgetRange" defaultValue="" error={errors.budgetRange?.[0]}>
+          <SelectField label="Budget" name="budgetRange" defaultValue="" error={errors.budgetRange?.[0]}>
             <option value="" disabled>
               Select a range
             </option>
+            <option>$500-$1k</option>
             <option>$1k-$3k</option>
             <option>$3k-$7k</option>
             <option>$7k-$15k</option>
@@ -108,15 +106,15 @@ export function QuoteForm() {
           </SelectField>
         </div>
         <TextareaField
-          label="Goals / notes"
+          label="Main goal"
           name="goals"
-          placeholder="What should the new site do better? More leads, better trust, a stronger first impression, clearer service pages, easier booking, and so on."
+          placeholder="What should this website help your business do better?"
           error={errors.goals?.[0]}
         />
         <input type="text" name="website" className="hidden" tabIndex={-1} autoComplete="off" />
         <FormStatus error={error} />
         <Button type="submit" disabled={loading} className="w-full">
-          {loading ? "Submitting..." : "Submit quote request"}
+          {loading ? "Submitting..." : "Request quote"}
         </Button>
       </form>
     </SurfaceCard>

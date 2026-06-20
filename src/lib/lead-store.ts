@@ -1,14 +1,40 @@
-export async function saveContactLead(..._args: unknown[]) {
-  void _args;
-  return;
+import { mkdir, appendFile } from "node:fs/promises";
+import path from "node:path";
+import { ContactInput, PreviewInput, QuoteInput } from "@/lib/schemas";
+
+const dataDirectory = path.join(process.cwd(), "data");
+const submissionsPath = path.join(dataDirectory, "lead-submissions.jsonl");
+
+type LeadSubmission =
+  | { type: "contact"; submittedAt: string; payload: ContactInput }
+  | { type: "quote"; submittedAt: string; payload: QuoteInput }
+  | { type: "preview"; submittedAt: string; payload: PreviewInput };
+
+async function persistLead(entry: LeadSubmission) {
+  await mkdir(dataDirectory, { recursive: true });
+  await appendFile(submissionsPath, `${JSON.stringify(entry)}\n`, "utf8");
 }
 
-export async function saveQuoteLead(..._args: unknown[]) {
-  void _args;
-  return;
+export async function saveContactLead(payload: ContactInput) {
+  await persistLead({
+    type: "contact",
+    submittedAt: new Date().toISOString(),
+    payload
+  });
 }
 
-export async function savePreviewLead(..._args: unknown[]) {
-  void _args;
-  return;
+export async function saveQuoteLead(payload: QuoteInput) {
+  await persistLead({
+    type: "quote",
+    submittedAt: new Date().toISOString(),
+    payload
+  });
+}
+
+export async function savePreviewLead(payload: PreviewInput) {
+  await persistLead({
+    type: "preview",
+    submittedAt: new Date().toISOString(),
+    payload
+  });
 }
