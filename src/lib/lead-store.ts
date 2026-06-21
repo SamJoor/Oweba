@@ -1,5 +1,6 @@
 import { mkdir, appendFile } from "node:fs/promises";
 import path from "node:path";
+import { PreviewOutput } from "@/lib/preview";
 import { ContactInput, PreviewInput, QuoteInput } from "@/lib/schemas";
 
 const dataDirectory = path.join(process.cwd(), "data");
@@ -8,7 +9,7 @@ const submissionsPath = path.join(dataDirectory, "lead-submissions.jsonl");
 type LeadSubmission =
   | { type: "contact"; submittedAt: string; payload: ContactInput }
   | { type: "quote"; submittedAt: string; payload: QuoteInput }
-  | { type: "preview"; submittedAt: string; payload: PreviewInput };
+  | { type: "preview"; submittedAt: string; payload: PreviewInput; preview: PreviewOutput };
 
 async function persistLead(entry: LeadSubmission) {
   await mkdir(dataDirectory, { recursive: true });
@@ -31,10 +32,11 @@ export async function saveQuoteLead(payload: QuoteInput) {
   });
 }
 
-export async function savePreviewLead(payload: PreviewInput) {
+export async function savePreviewLead(payload: PreviewInput, preview: PreviewOutput) {
   await persistLead({
     type: "preview",
     submittedAt: new Date().toISOString(),
-    payload
+    payload,
+    preview
   });
 }
