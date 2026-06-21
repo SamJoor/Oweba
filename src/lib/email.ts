@@ -247,8 +247,8 @@ export async function sendPreviewNotification(email: string, businessName: strin
   const fields = [
     { label: "Business name", value: businessName },
     { label: "Email", value: email },
-    { label: "Headline", value: preview.hero.headline },
-    { label: "Primary CTA", value: preview.hero.primaryCta }
+    { label: "Headline", value: preview.headline },
+    { label: "Primary CTA", value: preview.primaryCta }
   ];
 
   await sendEmail({
