@@ -67,7 +67,7 @@ export function ContactForm() {
         <p className="text-xs uppercase tracking-[0.18em] text-[#2F6BFF]">Sheet C-01</p>
         <h3 className="text-2xl">Book a call</h3>
         <p className="mt-2 text-sm leading-7 text-[#1F2937]/76">
-          Send a few times that work for you and a quick note. We will confirm the best slot by email.
+          Share your contact info, a few times that work, and a short note. We will confirm by email.
         </p>
       </div>
       <form className="grid gap-4" onSubmit={handleSubmit}>
@@ -81,10 +81,11 @@ export function ContactForm() {
         </div>
         <div className="grid gap-4">
           <p className="text-xs uppercase tracking-[0.14em] text-[#163A70]">Preferred call times</p>
+          <p className="text-sm text-[#1F2937]/70">Send 1 to 3 options in plain language, like &quot;Tuesday at 2pm&quot; or &quot;Friday morning&quot;.</p>
           <div className="grid gap-4 md:grid-cols-3">
-            <InputField label="Option 1" type="datetime-local" name="preferredTime1" error={errors.preferredTime1?.[0]} />
-            <InputField label="Option 2" type="datetime-local" name="preferredTime2" error={errors.preferredTime2?.[0]} />
-            <InputField label="Option 3" type="datetime-local" name="preferredTime3" error={errors.preferredTime3?.[0]} />
+            <InputField label="Option 1" name="preferredTime1" placeholder="Tuesday at 2pm" error={errors.preferredTime1?.[0]} />
+            <InputField label="Option 2" name="preferredTime2" placeholder="Thursday at 10am" error={errors.preferredTime2?.[0]} />
+            <InputField label="Option 3" name="preferredTime3" placeholder="Friday morning" error={errors.preferredTime3?.[0]} />
           </div>
         </div>
         <TextareaField
