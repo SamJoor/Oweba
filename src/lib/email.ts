@@ -210,7 +210,6 @@ export async function sendContactNotification(input: ContactInput) {
     { label: "Phone", value: input.phone },
     { label: "Preferred time 1", value: input.preferredTime1 || "N/A" },
     { label: "Preferred time 2", value: input.preferredTime2 || "N/A" },
-    { label: "Preferred time 3", value: input.preferredTime3 || "N/A" },
     { label: "Message", value: input.message }
   ];
 

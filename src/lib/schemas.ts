@@ -29,7 +29,6 @@ export const contactSchema = z.object({
   phone: z.string().min(7, "Enter a valid phone number."),
   preferredTime1: z.string().optional().or(z.literal("")),
   preferredTime2: z.string().optional().or(z.literal("")),
-  preferredTime3: z.string().optional().or(z.literal("")),
   message: z.string().min(10, "Share a quick note so we can prepare."),
   website: z.string().max(0).optional(),
 });

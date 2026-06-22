@@ -9,7 +9,7 @@ import { InputField, TextareaField } from "@/components/forms/form-field";
 import { contactSchema } from "@/lib/schemas";
 
 type Errors = Partial<
-  Record<"name" | "businessName" | "email" | "phone" | "preferredTime1" | "preferredTime2" | "preferredTime3" | "message", string[]>
+  Record<"name" | "businessName" | "email" | "phone" | "preferredTime1" | "preferredTime2" | "message", string[]>
 >;
 
 export function ContactForm() {
@@ -81,11 +81,10 @@ export function ContactForm() {
         </div>
         <div className="grid gap-4">
           <p className="text-xs uppercase tracking-[0.14em] text-[#163A70]">Preferred call times</p>
-          <p className="text-sm text-[#1F2937]/70">Send 1 to 3 options in plain language, like &quot;Tuesday at 2pm&quot; or &quot;Friday morning&quot;.</p>
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <p className="text-sm text-[#1F2937]/70">Send 1 or 2 options in plain language, like &quot;Tuesday at 2pm&quot; or &quot;Friday morning&quot;.</p>
+          <div className="grid gap-4 md:grid-cols-2">
             <InputField label="Option 1" name="preferredTime1" placeholder="Tuesday at 2pm" error={errors.preferredTime1?.[0]} />
             <InputField label="Option 2" name="preferredTime2" placeholder="Thursday at 10am" error={errors.preferredTime2?.[0]} />
-            <InputField label="Option 3" name="preferredTime3" placeholder="Friday morning" error={errors.preferredTime3?.[0]} />
           </div>
         </div>
         <TextareaField
