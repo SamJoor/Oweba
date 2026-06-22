@@ -82,7 +82,7 @@ export function ContactForm() {
         <div className="grid gap-4">
           <p className="text-xs uppercase tracking-[0.14em] text-[#163A70]">Preferred call times</p>
           <p className="text-sm text-[#1F2937]/70">Send 1 to 3 options in plain language, like &quot;Tuesday at 2pm&quot; or &quot;Friday morning&quot;.</p>
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             <InputField label="Option 1" name="preferredTime1" placeholder="Tuesday at 2pm" error={errors.preferredTime1?.[0]} />
             <InputField label="Option 2" name="preferredTime2" placeholder="Thursday at 10am" error={errors.preferredTime2?.[0]} />
             <InputField label="Option 3" name="preferredTime3" placeholder="Friday morning" error={errors.preferredTime3?.[0]} />
